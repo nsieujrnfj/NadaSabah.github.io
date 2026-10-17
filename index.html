@@ -1,110 +1,319 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nada Sabah | طب عام - المرحلة الثالثة</title>
-<style>
-:root{--bg:#f6f4fb;--card:#fff;--ink:#24233a;--muted:#77758d;--line:#e9e5f1;--pink:#d96f9f;--pink2:#f9e6ef;--purple:#7568c8;--purple2:#efedff;--mint:#dff5ec;--shadow:0 8px 28px #29204d0b}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1120px;margin:auto;padding:22px}.hero{background:linear-gradient(125deg,#302b53,#6555a2 65%,#c56f9d);color:white;border-radius:25px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:'✦';position:absolute;font-size:150px;left:25px;top:-38px;color:#ffffff15}.heroTop{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.eyebrow{font-size:12px;letter-spacing:1.8px;opacity:.8}.hero h1{margin:7px 0 5px;font-size:clamp(25px,4vw,38px)}.hero p{margin:0;color:#eee9ff}.heroBtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.btn{padding:10px 14px;border-radius:12px;background:#fff;color:#40365f;font-weight:700}.btn.primary{background:var(--pink);color:#fff}.btn.ghost{background:#ffffff20;color:#fff;border:1px solid #ffffff50}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:17px 0}.stat,.panel,.course{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.stat{padding:17px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:26px;margin:5px 0}.bar{height:8px;border-radius:99px;background:#eeebf5;overflow:hidden;margin-top:10px}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--pink));border-radius:99px;transition:width .2s}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:22px 0 12px}.toolbar h2{margin:0;font-size:21px}.toolbar p{margin:4px 0 0;color:var(--muted);font-size:13px}.tools{display:flex;gap:8px;flex-wrap:wrap}.field{border:1px solid var(--line);background:white;border-radius:10px;padding:9px 11px;min-width:0;color:var(--ink)}.courses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.course{padding:17px;min-width:0}.courseHead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.course h3{margin:0 0 5px;font-size:20px}.course .sub{font-size:12px;color:var(--muted)}.code{background:var(--purple2);color:var(--purple);border-radius:9px;padding:7px 9px;font-weight:800;font-size:12px}.courseProgress{margin:14px 0}.courseProgress .row{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:5px}.subcourse{border:1px solid var(--line);border-radius:13px;padding:12px;margin-top:10px;background:#fdfcff}.subHead{display:flex;align-items:center;justify-content:space-between;gap:8px}.subHead strong{font-size:14px}.miniBtns{display:flex;gap:5px}.iconbtn{background:#f1eff8;color:#62588a;border-radius:8px;padding:6px 8px;font-size:12px}.kind{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;padding-top:9px;border-top:1px dashed var(--line)}.kind label{font-size:13px;color:#5e5b72}.count{display:flex;align-items:center;gap:5px}.count input{width:54px;text-align:center;padding:6px 3px;border:1px solid var(--line);border-radius:8px;background:white}.count span{font-size:11px;color:var(--muted)}.openBtn{width:100%;margin-top:11px;background:var(--pink2);color:#a44070;padding:10px;border-radius:10px;font-weight:700}.lectures{margin-top:10px;padding:10px;background:white;border:1px solid var(--line);border-radius:11px;display:none}.lectures.open{display:block}.lectureList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.lecture{display:flex;align-items:center;gap:8px;font-size:12px;padding:8px;border-radius:8px;background:#faf9fd;min-width:0}.lecture input{accent-color:var(--pink);width:16px;height:16px;flex-shrink:0}.lecture span{overflow-wrap:anywhere}.lecture.done span{text-decoration:line-through;color:#9290a0}.empty{color:var(--muted);font-size:13px;padding:10px;text-align:center}.appearance-fab{position:fixed;left:14px;bottom:14px;z-index:8;width:43px;height:43px;border-radius:50%;background:var(--card);color:var(--purple);border:1px solid var(--line);box-shadow:var(--shadow);font-size:20px}.foot{text-align:center;color:var(--muted);font-size:12px;padding:25px 0 8px}.modalBg{position:fixed;inset:0;background:#17132980;display:none;align-items:center;justify-content:center;padding:18px;z-index:9}.modalBg.show{display:flex}.modal{background:white;border-radius:20px;padding:22px;width:min(460px,100%);box-shadow:0 20px 70px #0002}.modal h3{margin-top:0}.modal .field{width:100%;margin:5px 0 10px}.modalActions{display:flex;gap:8px;justify-content:flex-start;margin-top:12px}.hint{font-size:12px;color:var(--muted);line-height:1.6}.danger{color:#b34455!important;background:#fff0f1!important}
-@media(max-width:700px){.appearance-fab{left:10px;bottom:10px;width:39px;height:39px}.wrap{padding:13px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.courses{grid-template-columns:1fr}.hero{padding:21px}.lectureList{grid-template-columns:1fr}.toolbar{align-items:flex-start}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ندى صباح - Medical Study Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { cairo: ['Cairo', 'sans-serif'] } } }
+        }
+    </script>
+    <style> body { font-family: 'Cairo', sans-serif; } </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen p-4 sm:p-8 transition-colors duration-300">
 
-/* Personal dashboard */
-:root{--accent:#d96f9f;--accent-soft:#f9e6ef}body[data-theme="dark"]{--bg:#151522;--card:#222233;--ink:#f0eef8;--muted:#b1adc6;--line:#39364d;--pink:#e58ab5;--pink2:#40283a;--purple:#a69af7;--purple2:#302b4a;--shadow:0 8px 28px #0003}body[data-theme="dark"] .field,body[data-theme="dark"] .count input,body[data-theme="dark"] .lectures,body[data-theme="dark"] .subcourse,body[data-theme="dark"] .lecture{background:#29283b;color:var(--ink);border-color:var(--line)}body[data-theme="dark"] .kind label{color:#d4d0e5}body[data-theme="dark"] .iconbtn{background:#37334d;color:#e3defe}body[data-theme="dark"] .bar{background:#39364d}body[data-theme="dark"] .openBtn{background:#40283a;color:#ffc4df}body[data-theme="dark"] .modal{background:var(--card);color:var(--ink)}body{--pink:var(--accent);--pink2:var(--accent-soft)}.extraGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}.panel{padding:17px;min-width:0}.panel h2{margin:0 0 12px;font-size:19px}.panelHead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.inlineForm{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.inlineForm .field{flex:1;min-width:100px}.todoList{display:grid;gap:7px;margin-top:10px}.todoItem{display:flex;align-items:center;gap:9px;padding:10px;border:1px solid var(--line);border-radius:11px;background:var(--bg)}.todoItem input{accent-color:var(--pink);width:17px;height:17px}.todoItem .todoText{flex:1;overflow-wrap:anywhere}.todoItem.done .todoText{text-decoration:line-through;color:var(--muted)}.tinyBtn{padding:5px 8px;border-radius:8px;background:var(--pink2);color:var(--ink)}.timerDisplay{font-size:clamp(35px,7vw,54px);font-weight:800;letter-spacing:2px;text-align:center;padding:13px 0;font-variant-numeric:tabular-nums}.timerBtns{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.timerBtns button{padding:9px 13px;border-radius:10px;background:var(--purple2);color:var(--ink);font-weight:700}.timerBtns .go{background:var(--pink);color:#fff}.quote{font-size:18px;line-height:1.8;font-weight:650}.quoteBy{color:var(--muted);font-size:12px;margin-top:8px}.colorDots{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.colorDot{width:27px;height:27px;border-radius:50%;border:3px solid var(--card);outline:1px solid var(--line);padding:0}.colorDot.active{outline:2px solid var(--ink)}.summaryPills{display:flex;gap:8px;flex-wrap:wrap}.pill{border-radius:10px;padding:8px 10px;background:var(--purple2);font-size:13px}.tableWrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:right;padding:10px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-weight:700}@media(max-width:700px){.extraGrid{grid-template-columns:1fr}.panel{padding:14px}}
+    <div class="max-w-7xl mx-auto space-y-6">
+        
+        <!-- Header -->
+        <header class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-wrap justify-between items-center gap-4">
+            <div>
+                <h1 id="headerName" class="text-2xl sm:text-3xl font-extrabold text-purple-600 dark:text-purple-400">ندى صباح</h1>
+                <p id="headerInfo" class="text-sm text-slate-500 dark:text-slate-400 mt-1">جامعة أشور • كلية الطب • المرحلة الثالثة</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="toggleDarkMode()" class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-xl text-sm font-bold shadow-sm">
+                    <i class="fa-solid fa-moon"></i> <span id="darkText">الوضع الداكن</span>
+                </button>
+            </div>
+        </header>
 
-/* Clean multi-page navigation layout */
-.degree{font-size:19px!important;font-weight:800;margin-top:12px!important;color:#fff!important}.degree span{font-size:13px;font-weight:500;opacity:.78;display:inline-block;margin-right:7px}.tagline{font-size:13px!important;margin-top:5px!important;color:#eee9ff!important}
-.mainNav{display:flex;gap:7px;overflow-x:auto;padding:8px;margin:14px 0 17px;background:var(--card);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow);scrollbar-width:thin}.navItem{white-space:nowrap;border-radius:11px;padding:11px 14px;background:transparent;color:var(--muted);font-weight:700;font-size:13px;transition:.15s}.navItem.active{background:var(--pink2);color:var(--pink)}.page{display:none;animation:fadeIn .18s ease}.page.active{display:block}@keyframes fadeIn{from{opacity:.65;transform:translateY(3px)}to{opacity:1;transform:none}}.page .stats{margin-top:0}.page .toolbar{margin-top:4px}.page .extraGrid{display:contents}.page .panel{margin-bottom:14px}.page#page-home .homeWelcome{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-bottom:14px}.homeNote{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.homeNote h2{font-size:20px;margin:0 0 8px}.homeNote p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}.homeNote .quote{font-size:17px}.homeActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.homeActions button{background:var(--pink2);color:var(--pink);padding:10px 12px;border-radius:10px;font-weight:700}.page .panel[style*="grid-column"]{grid-column:auto!important}.page .panel h2{letter-spacing:-.2px}.page .courses{margin-bottom:8px}.page .foot{padding-top:18px}
-body[data-theme="dark"] .mainNav{background:var(--card)}body[data-theme="dark"] .navItem.active{background:var(--pink2);color:#ffc4df}body[data-theme="dark"] .homeActions button{background:var(--pink2);color:#ffc4df}
-@media(max-width:700px){.mainNav{margin:10px 0 14px;padding:6px;border-radius:13px}.navItem{padding:10px 12px}.degree{font-size:17px!important}.page#page-home .homeWelcome{grid-template-columns:1fr}.heroTop{align-items:flex-start}.heroTop .btn{font-size:12px}}
+        <!-- Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-center">
+                <p class="text-xs text-slate-400 font-bold">نسبة إنجاز الدراسة</p>
+                <p id="overallStudyProgress" class="text-xl font-extrabold text-purple-600 mt-1">0%</p>
+            </div>
+            <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-center">
+                <p class="text-xs text-slate-400 font-bold">نسبة إنجاز المراجعة</p>
+                <p id="overallReviewProgress" class="text-xl font-extrabold text-indigo-600 mt-1">0%</p>
+            </div>
+            <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-center">
+                <p class="text-xs text-slate-400 font-bold">المصروف هذا الشهر</p>
+                <p id="statSpent" class="text-xl font-extrabold text-red-500 mt-1">0 د.ع</p>
+            </div>
+            <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-center">
+                <p class="text-xs text-slate-400 font-bold">المبلغ الموفر</p>
+                <p id="statSaved" class="text-xl font-extrabold text-emerald-500 mt-1">0 د.ع</p>
+            </div>
+        </div>
 
-</style></head>
-<body><main class="wrap">
-<section class="hero"><div class="heroTop"><div><div class="eyebrow">YOUR PERSONAL STUDY SPACE</div><h1 id="siteName">Nada Sabah</h1><p class="degree">طب عام · المرحلة الثالثة <span>General Medicine · Stage 3</span></p><p class="tagline">مساحتج الشخصية للدراسة والإنجاز، خطوة بخطوة 🩺</p></div><button class="btn ghost" onclick="editName()">✎ تعديل الاسم</button></div><input id="importFile" type="file" accept="application/json" hidden onchange="importData(event)"></section>
-<nav class="mainNav" aria-label="أقسام الموقع"><button class="navItem active" data-page="home" onclick="showPage('home',this)">⌂ الرئيسية</button><button class="navItem" data-page="courses" onclick="showPage('courses',this)">📚 موادي</button><button class="navItem" data-page="tasks" onclick="showPage('tasks',this)">☑ المهام</button><button class="navItem" data-page="focus" onclick="showPage('focus',this)">⏱️ جلسات الدراسة</button><button class="navItem" data-page="analytics" onclick="showPage('analytics',this)">📊 الإحصائيات</button><button class="navItem" data-page="schedule" onclick="showPage('schedule',this)">🗓️ الجدول</button><button class="navItem" data-page="history" onclick="showPage('history',this)">📖 سجل الجلسات</button></nav><div class="pageArea" id="pageArea"><section class="page active" id="page-home"></section><section class="page" id="page-courses"></section><section class="page" id="page-tasks"></section><section class="page" id="page-focus"></section><section class="page" id="page-analytics"></section><section class="page" id="page-schedule"></section><section class="page" id="page-settings"></section><section class="page" id="page-history"></section></div>
-<section class="stats"><div class="stat"><small>المحاضرات المكتملة</small><strong id="doneStat">0</strong><div class="bar"><span id="overallBar"></span></div></div><div class="stat"><small>إجمالي المحاضرات</small><strong id="totalStat">0</strong><span class="hint">كل النظري والعملي و TBL</span></div><div class="stat"><small>نسبة الإنجاز</small><strong id="percentStat">0%</strong><span class="hint">كل محاضرة تكمليها تقرّبج لهدفج ✨</span></div></section>
-<div class="toolbar"><div><h2>موادي الدراسية</h2><p>اختاري المادة، وافتحي التفرّع حتى تظهر المحاضرات وتعلّمين المكتمل منها.</p></div><div class="tools"><button class="btn primary" onclick="addCourse()">＋ إضافة مادة</button><input id="search" class="field" placeholder="بحث عن مادة…" oninput="render()"><select id="filter" class="field" onchange="render()"><option value="all">كل المواد</option><option value="incomplete">غير المكتملة</option><option value="complete">المكتملة</option></select></div></div>
-<section id="courses" class="courses"></section>
-<section class="extraGrid">
- <section class="panel"><div class="panelHead"><h2>🎨 مظهر الموقع</h2><button class="iconbtn" onclick="toggleTheme()" id="themeBtn">🌙 الوضع الداكن</button></div><p class="hint">اختاري الوضع واللون اللي يريح عينج بالدراسة.</p><div class="colorDots"><button class="colorDot" style="background:#d96f9f" title="وردي" onclick="setAccent('#d96f9f','#f9e6ef')"></button><button class="colorDot" style="background:#7568c8" title="بنفسجي" onclick="setAccent('#7568c8','#efedff')"></button><button class="colorDot" style="background:#419b8a" title="أخضر نعناعي" onclick="setAccent('#419b8a','#e1f5ef')"></button><button class="colorDot" style="background:#4c83c3" title="أزرق" onclick="setAccent('#4c83c3','#e6f0ff')"></button><button class="colorDot" style="background:#d38b36" title="ذهبي" onclick="setAccent('#d38b36','#fff0d8')"></button></div></section>
- <section class="panel"><div class="panelHead"><h2>✨ مقولة اليوم</h2><button class="iconbtn" onclick="newQuote()">مقولة ثانية ↻</button></div><div id="quoteText" class="quote"></div><div id="quoteBy" class="quoteBy"></div></section>
- <section class="panel"><div class="panelHead"><h2>📝 To-do list</h2><span class="hint" id="todoCount">0 مهام</span></div><div class="inlineForm"><input class="field" id="todoInput" placeholder="شنو لازم تنجزين اليوم؟" onkeydown="if(event.key==='Enter')addTodo()"><button class="btn primary" onclick="addTodo()">＋ إضافة</button></div><div class="todoList" id="todoList"></div></section>
- <section class="panel"><div class="panelHead"><h2>⏱️ Stopwatch</h2><span class="hint">سجّلي وقت دراستج</span></div><div class="timerDisplay" id="stopwatchDisplay">00:00:00</div><div class="timerBtns"><button class="go" onclick="swStart()">▶ بدء</button><button onclick="swPause()">⏸ إيقاف مؤقت</button><button onclick="swReset()">↻ تصفير</button><button onclick="swSave()">حفظ الجلسة</button></div></section>
- <section class="panel"><div class="panelHead"><h2>🍅 Study session</h2><span class="hint">جلسة تركيز</span></div><div class="inlineForm"><label class="hint">مدة التركيز بالدقائق <input class="field" id="focusMinutes" type="number" min="1" max="240" value="25" style="width:85px"></label><label class="hint">اسم الجلسة <input class="field" id="focusLabel" placeholder="مثلاً: Medicine" style="width:140px"></label></div><div class="timerDisplay" id="focusDisplay">25:00</div><div class="timerBtns"><button class="go" onclick="focusStart()">▶ ابدئي</button><button onclick="focusPause()">⏸ إيقاف مؤقت</button><button onclick="focusReset()">↻ إعادة</button><button onclick="focusFinish()">✓ حفظ الجلسة</button></div><p class="hint" id="focusStatus">اختاري المدة والمادة، وبعدها ابدئي جلستج.</p></section>
- <section class="panel"><div class="panelHead"><h2>📊 إحصائياتي</h2><select class="field" id="statsRange" onchange="renderActivityStats()"><option value="day">اليوم</option><option value="week">هذا الأسبوع</option><option value="month">هذا الشهر</option></select></div><div class="summaryPills" id="activityStats"></div><p class="hint">الإحصائيات تعتمد على جلسات الدراسة المحفوظة وتأشيرات المحاضرات.</p></section>
- <section class="panel" style="grid-column:1/-1"><div class="panelHead"><h2>🗓️ جدول المواد والمحاضرات</h2><button class="iconbtn" onclick="renderSchedule()">↻ تحديث الجدول</button></div><p class="hint">ملخص لكل تفرّع. عدّلي أعداد المحاضرات من بطاقات المواد أعلاه، والجدول يتحدث تلقائياً.</p><div class="tableWrap" id="scheduleTable"></div></section>
- <section class="panel" style="grid-column:1/-1"><div class="panelHead"><h2>📚 سجل جلسات الدراسة</h2><button class="iconbtn danger" onclick="clearSessions()">مسح السجل</button></div><div class="tableWrap" id="sessionsTable"></div></section>
-</section>
+        <!-- Dashboard Body -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Subjects & Exams -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Subjects -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-bold flex items-center gap-2">
+                            <i class="fa-solid fa-book-medical text-purple-500"></i> المواد والملازم الدراسية
+                        </h2>
+                        <button onclick="addSubject()" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl text-sm transition shadow-sm">+ إضافة مادة</button>
+                    </div>
+                    <div id="subjectsContainer" class="space-y-6"></div>
+                </div>
 
-<div class="foot">Made for Nada Sabah ♡ · بياناتج تنحفظ على نفس الجهاز والمتصفح</div></main>
-<button class="appearance-fab" title="مظهر الموقع" aria-label="مظهر الموقع" onclick="showPage('settings')">🎨</button>
-<div id="modalBg" class="modalBg" onclick="if(event.target===this)closeModal()"><div class="modal"><div id="modalContent"></div></div></div>
-<script>
-const initial=[
-{id:'CA',name:'Clinical Attachments',subs:[{name:'Communication skills',kinds:[{name:'محاضرات',count:2,done:[]}]},{name:'Medicine',kinds:[{name:'نظري',count:2,done:[]},{name:'عملي',count:5,done:[]}]},{name:'Surgery',kinds:[{name:'نظري',count:1,done:[]},{name:'عملي',count:3,done:[]}]}]},
-{id:'RM',name:'Research Methodology',subs:[{name:'Research Methodology',kinds:[{name:'نظري',count:12,done:[]},{name:'TBL',count:3,done:[]}]}]},
-{id:'ID',name:'Infection Diseases',subs:[{name:'Medicine',kinds:[{name:'نظري',count:8,done:[]}]},{name:'Surgery',kinds:[{name:'نظري',count:1,done:[]}]},{name:'Microbiology',kinds:[{name:'نظري',count:4,done:[]},{name:'عملي',count:1,done:[]}]},{name:'Community',kinds:[{name:'TBL',count:1,done:[]},{name:'نظري',count:2,done:[]}]}]},
-{id:'NT',name:'Nutrition and System module',subs:[{name:'Biochemistry',kinds:[{name:'نظري',count:5,done:[]},{name:'TBL',count:1,done:[]}]},{name:'Community',kinds:[{name:'نظري',count:5,done:[]}]},{name:'Medicine',kinds:[{name:'نظري',count:4,done:[]}]},{name:'فرع جديد (عدّلي اسمه)',kinds:[{name:'نظري',count:0,done:[]}]}]}
-];
-let data;try{data=JSON.parse(localStorage.getItem('nadaMedicalTracker'))||structuredClone(initial)}catch(e){data=structuredClone(initial)}
-let userName=localStorage.getItem('nadaMedicalName')||'Nada Sabah';let openSubs=new Set();let modalAction=null;
-function save(){localStorage.setItem('nadaMedicalTracker',JSON.stringify(data));localStorage.setItem('nadaMedicalName',userName);updateStats();}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function totalForSub(s){return s.kinds.reduce((a,k)=>a+Math.max(0,Number(k.count)||0),0)}
-function doneForSub(s){return s.kinds.reduce((a,k)=>a+(k.done||[]).filter(Boolean).length,0)}
-function totals(){let total=0,done=0;data.forEach(c=>c.subs.forEach(s=>s.kinds.forEach(k=>{total+=Math.max(0,+k.count||0);done+=(k.done||[]).filter(Boolean).length})));return{total,done,pct:total?Math.round(done/total*100):0}}
-function updateStats(){let t=totals();document.getElementById('doneStat').textContent=t.done;document.getElementById('totalStat').textContent=t.total;document.getElementById('percentStat').textContent=t.pct+'%';document.getElementById('overallBar').style.width=t.pct+'%';document.getElementById('siteName').textContent=userName;}
-function render(){let root=document.getElementById('courses'),q=document.getElementById('search').value.toLowerCase(),f=document.getElementById('filter').value;let html='';data.forEach((c,ci)=>{let ct=0,cd=0;c.subs.forEach(s=>{ct+=totalForSub(s);cd+=doneForSub(s)});if(f==='incomplete'&&cd===ct||f==='complete'&&cd!==ct)return;if(q&&!(`${c.name} ${c.id} ${c.subs.map(s=>s.name).join(' ')}`.toLowerCase().includes(q)))return;html+=`<article class="course"><div class="courseHead"><div><h3>${esc(c.name)}</h3><div class="sub">${c.subs.length} تفرّع · ${cd} من ${ct} محاضرة مكتملة</div></div><span class="code">${esc(c.id)}</span></div><div class="courseProgress"><div class="row"><span>إنجاز المادة</span><strong>${ct?Math.round(cd/ct*100):0}%</strong></div><div class="bar"><span style="width:${ct?cd/ct*100:0}%"></span></div></div><div class="miniBtns"><button class="iconbtn" onclick="editCourse(${ci})">✎ تعديل المادة</button><button class="iconbtn" onclick="addSub(${ci})">＋ إضافة تفرّع</button><button class="iconbtn danger" onclick="deleteCourse(${ci})">حذف</button></div>`;
-c.subs.forEach((s,si)=>{let key=ci+'-'+si,isOpen=openSubs.has(key);html+=`<div class="subcourse"><div class="subHead"><strong>${esc(s.name)}</strong><div class="miniBtns"><button class="iconbtn" onclick="editSub(${ci},${si})">تعديل</button><button class="iconbtn danger" onclick="deleteSub(${ci},${si})">×</button></div></div>`;s.kinds.forEach((k,ki)=>{let n=Math.max(0,+k.count||0),d=(k.done||[]).filter(Boolean).length;html+=`<div class="kind"><label>${esc(k.name)} <span style="color:#a3a0b2">(${d}/${n})</span></label><div class="count"><input aria-label="عدد ${esc(k.name)}" type="number" min="0" value="${n}" onchange="setCount(${ci},${si},${ki},this.value)"><span>عدد</span><button class="iconbtn" title="تعديل نوع المحاضرات" onclick="editKind(${ci},${si},${ki})">✎</button></div></div>`});html+=`<button class="openBtn" onclick="toggleSub('${key}')">${isOpen?'إخفاء المحاضرات ▲':'عرض وتأشير المحاضرات ▾'}</button><div class="lectures ${isOpen?'open':''}"><div class="lectureList">`;s.kinds.forEach((k,ki)=>{for(let j=0;j<Math.max(0,+k.count||0);j++){let checked=!!(k.done&&k.done[j]);html+=`<label class="lecture ${checked?'done':''}"><input type="checkbox" ${checked?'checked':''} onchange="mark(${ci},${si},${ki},${j},this.checked)"><span>${esc(k.name)} ${j+1}</span></label>`}});html+='</div><button class="iconbtn" style="margin-top:10px" onclick="addKind('+ci+','+si+')">＋ إضافة نوع محاضرات</button></div></div>'});html+='</article>'});root.innerHTML=html||'<div class="panel empty">ما لكيت مادة مطابقة للبحث.</div>';updateStats()}
-function toggleSub(k){openSubs.has(k)?openSubs.delete(k):openSubs.add(k);render()}
-function setCount(ci,si,ki,val){let k=data[ci].subs[si].kinds[ki],n=Math.max(0,Math.min(500,parseInt(val)||0)),old=k.done||[];k.count=n;k.done=Array.from({length:n},(_,i)=>!!old[i]);save();render()}
-function mark(ci,si,ki,j,v){let k=data[ci].subs[si].kinds[ki];if(!k.done)k.done=[];k.done[j]=v;save();render()}
-function showModal(title,body,submitText,fn){document.getElementById('modalContent').innerHTML=`<h3>${title}</h3>${body}<div class="modalActions"><button class="btn primary" id="modalSubmit">${submitText}</button><button class="btn" onclick="closeModal()">إلغاء</button></div>`;document.getElementById('modalBg').classList.add('show');document.getElementById('modalSubmit').onclick=fn}
-function closeModal(){document.getElementById('modalBg').classList.remove('show')}
-function editName(){showModal('اسمج بالموقع',`<label>الاسم الظاهر</label><input class="field" id="nameInput" value="${esc(userName)}">`,'حفظ',()=>{userName=document.getElementById('nameInput').value.trim()||'Medical Student';save();closeModal();render()})}
-function addCourse(){showModal('إضافة مادة جديدة',`<label>اسم المادة</label><input class="field" id="newName" placeholder="مثلاً: Anatomy"><label>الاختصار</label><input class="field" id="newId" placeholder="مثلاً: AN">`,'إضافة',()=>{let name=document.getElementById('newName').value.trim(),id=document.getElementById('newId').value.trim()||'NEW';if(!name)return alert('اكتبي اسم المادة');data.push({id,name,subs:[]});save();closeModal();render()})}
-function editCourse(ci){let c=data[ci];showModal('تعديل المادة',`<label>اسم المادة</label><input class="field" id="newName" value="${esc(c.name)}"><label>الاختصار</label><input class="field" id="newId" value="${esc(c.id)}">`,'حفظ',()=>{c.name=document.getElementById('newName').value.trim()||c.name;c.id=document.getElementById('newId').value.trim()||c.id;save();closeModal();render()})}
-function addSub(ci){showModal('إضافة تفرّع',`<label>اسم التفرّع</label><input class="field" id="newName" placeholder="مثلاً: Physiology"><p class="hint">بعد الإضافة، اختاري «إضافة نوع محاضرات» حتى تضيفين نظري أو عملي أو TBL وعددها.</p>`,'إضافة',()=>{let name=document.getElementById('newName').value.trim();if(!name)return alert('اكتبي اسم التفرّع');data[ci].subs.push({name,kinds:[]});save();closeModal();render()})}
-function editSub(ci,si){let s=data[ci].subs[si];showModal('تعديل اسم التفرّع',`<label>الاسم</label><input class="field" id="newName" value="${esc(s.name)}">`,'حفظ',()=>{s.name=document.getElementById('newName').value.trim()||s.name;save();closeModal();render()})}
-function deleteSub(ci,si){if(confirm('متأكدة تريدين حذف هذا التفرّع وكل تأشيرات محاضراته؟')){data[ci].subs.splice(si,1);save();render()}}
-function deleteCourse(ci){if(confirm('متأكدة تريدين حذف المادة وكل بياناتها؟')){data.splice(ci,1);save();render()}}
-function addKind(ci,si){showModal('إضافة نوع محاضرات',`<label>النوع (نظري، عملي، TBL…)</label><input class="field" id="kindName" placeholder="نظري"><label>عدد المحاضرات</label><input class="field" id="kindCount" type="number" min="0" value="1">`,'إضافة',()=>{let name=document.getElementById('kindName').value.trim(),n=Math.max(0,parseInt(document.getElementById('kindCount').value)||0);if(!name)return alert('اكتبي نوع المحاضرات');data[ci].subs[si].kinds.push({name,count:n,done:Array(n).fill(false)});save();closeModal();render()})}
-function editKind(ci,si,ki){let k=data[ci].subs[si].kinds[ki];showModal('تعديل نوع المحاضرات',`<label>اسم النوع</label><input class="field" id="kindName" value="${esc(k.name)}">`,'حفظ',()=>{k.name=document.getElementById('kindName').value.trim()||k.name;save();closeModal();render()})}
-function exportData(){let blob=new Blob([JSON.stringify({data,userName},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='nada-med-tracker-backup.json';a.click();URL.revokeObjectURL(a.href)}
-function importData(e){let file=e.target.files[0];if(!file)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!Array.isArray(x.data))throw 0;data=x.data;userName=x.userName||userName;save();render();alert('تم استرجاع بياناتج بنجاح ❤️')}catch(err){alert('الملف مو نسخة احتياطية صحيحة')}};r.readAsText(file);e.target.value=''}
+                <!-- Exams -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-purple-500"></i> جدول الامتحانات والمواعيد
+                        </h2>
+                        <button onclick="addExam()" class="px-3 py-1.5 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300 font-bold rounded-xl text-xs">+ إضافة موعد</button>
+                    </div>
+                    <div id="examsList" class="space-y-3"></div>
+                </div>
+            </div>
 
-let todos=JSON.parse(localStorage.getItem('nadaMedTodos')||'[]'),studySessions=JSON.parse(localStorage.getItem('nadaMedSessions')||'[]'),activityLog=JSON.parse(localStorage.getItem('nadaMedActivity')||'[]');
-let currentTheme=localStorage.getItem('nadaMedTheme')||'light',accentColor=localStorage.getItem('nadaMedAccent')||'#d96f9f',accentSoft=localStorage.getItem('nadaMedAccentSoft')||'#f9e6ef';let swSeconds=0,swStartedAt=null,swInterval=null,focusRemaining=1500,focusEndAt=null,focusInterval=null;
-const quotes=[['مو لازم تكمّلين كلشي اليوم؛ المهم تتقدمين خطوة.','تذكير إلج 💗'],['الاستمرارية الصغيرة تصنع فرقاً كبيراً.','خطوة بخطوة'],['إنتِ مو مطالبة بالكمال، بس لا تتركين نفسج.','إلى ندى'],['كل محاضرة تكمليها هي استثمار بمستقبلج.','Medical journey 🩺'],['خذي نفس، رتّبي أولوياتج، وابدئي بأول خطوة.','إنتِ تكدرين'],['التعب مؤقت، والمعرفة اللي تبنينها تبقى.','Keep going'],['لا تقارنين بدايتج بنهاية طريق شخص ثاني.','كل وحدة إلها رحلتها']];
-function applyAppearance(){document.body.dataset.theme=currentTheme;document.documentElement.style.setProperty('--accent',accentColor);document.documentElement.style.setProperty('--accent-soft',accentSoft);let b=document.getElementById('themeBtn');if(b)b.textContent=currentTheme==='dark'?'☀️ الوضع الفاتح':'🌙 الوضع الداكن';document.querySelectorAll('.colorDot').forEach(el=>el.classList.toggle('active',el.getAttribute('onclick').includes(accentColor)))}
-function toggleTheme(){currentTheme=currentTheme==='dark'?'light':'dark';localStorage.setItem('nadaMedTheme',currentTheme);applyAppearance()}function setAccent(c,s){accentColor=c;accentSoft=s;localStorage.setItem('nadaMedAccent',c);localStorage.setItem('nadaMedAccentSoft',s);applyAppearance()}
-function newQuote(){let q=quotes[Math.floor(Math.random()*quotes.length)];document.getElementById('quoteText').textContent='“'+q[0]+'”';document.getElementById('quoteBy').textContent=q[1]}
-function saveTodos(){localStorage.setItem('nadaMedTodos',JSON.stringify(todos));renderTodos()}function addTodo(){let i=document.getElementById('todoInput'),v=i.value.trim();if(!v)return;todos.push({id:Date.now()+Math.random(),text:v,done:false});i.value='';saveTodos()}function toggleTodo(id,v){let t=todos.find(x=>x.id===id);if(t)t.done=v;saveTodos()}function deleteTodo(id){todos=todos.filter(t=>t.id!==id);saveTodos()}function renderTodos(){let r=document.getElementById('todoList');if(!r)return;document.getElementById('todoCount').textContent=todos.filter(t=>t.done).length+' / '+todos.length+' مهام';r.innerHTML=todos.length?todos.map(t=>`<div class="todoItem ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} onchange="toggleTodo(${t.id},this.checked)"><span class="todoText">${esc(t.text)}</span><button class="tinyBtn" onclick="deleteTodo(${t.id})">×</button></div>`).join(''):'<div class="empty">قائمتج فارغة، أضيفي أول مهمة 🌷</div>'}
-function fmtTime(n){n=Math.max(0,Math.floor(n));return [Math.floor(n/3600),Math.floor(n%3600/60),n%60].map(x=>String(x).padStart(2,'0')).join(':')}function swCurrent(){return swSeconds+(swStartedAt?Math.floor((Date.now()-swStartedAt)/1000):0)}function swPaint(){document.getElementById('stopwatchDisplay').textContent=fmtTime(swCurrent())}function swStart(){if(!swStartedAt){swStartedAt=Date.now();swInterval=setInterval(swPaint,250)}}function swPause(){if(swStartedAt){swSeconds=swCurrent();swStartedAt=null;clearInterval(swInterval);swInterval=null;swPaint()}}function swReset(){swPause();swSeconds=0;swPaint()}function recordSession(label,seconds,source){if(seconds<1)return;studySessions.unshift({id:Date.now()+Math.random(),label:(label||'جلسة دراسة').trim(),seconds:Math.round(seconds),source,at:new Date().toISOString()});localStorage.setItem('nadaMedSessions',JSON.stringify(studySessions));renderActivityStats();renderSessions()}function swSave(){swPause();if(!swSeconds){alert('ابدئي المؤقت أولاً حتى تحفظين جلسة ❤️');return}recordSession('Stopwatch',swSeconds,'stopwatch');swSeconds=0;swPaint()}
-function focusPaint(){let m=Math.floor(focusRemaining/60),s=focusRemaining%60;document.getElementById('focusDisplay').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}function focusTick(){if(!focusEndAt)return;focusRemaining=Math.max(0,Math.ceil((focusEndAt-Date.now())/1000));focusPaint();if(!focusRemaining){clearInterval(focusInterval);focusInterval=null;focusEndAt=null;document.getElementById('focusStatus').textContent='أحسنتِ! انتهت جلسة التركيز 🎉 احفظيها حتى تنضاف للإحصائيات.'}}function focusStart(){if(focusEndAt)return;if(focusRemaining<=0)focusRemaining=Math.max(1,parseInt(document.getElementById('focusMinutes').value)||25)*60;focusEndAt=Date.now()+focusRemaining*1000;focusInterval=setInterval(focusTick,250);document.getElementById('focusStatus').textContent='جلسة تركيز شغّالة… استمري يا بطلة 💗'}function focusPause(){if(focusEndAt){focusTick();focusEndAt=null;clearInterval(focusInterval);focusInterval=null;document.getElementById('focusStatus').textContent='الجلسة متوقفة مؤقتاً.'}}function focusReset(){focusPause();focusRemaining=Math.max(1,parseInt(document.getElementById('focusMinutes').value)||25)*60;focusPaint();document.getElementById('focusStatus').textContent='تمت إعادة ضبط الجلسة.'}function focusFinish(){focusPause();let total=Math.max(1,parseInt(document.getElementById('focusMinutes').value)||25)*60,elapsed=total-focusRemaining;if(elapsed<1){alert('ابدئي الجلسة أولاً ❤️');return}recordSession(document.getElementById('focusLabel').value||'جلسة تركيز',elapsed,'focus');focusRemaining=total;focusPaint();document.getElementById('focusStatus').textContent='انحفظت جلستج بالإحصائيات، عاشت إيدج! ✨'}
-function startOfDay(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate())}function inRange(iso,r){let d=new Date(iso),n=new Date();if(r==='day')return d.toDateString()===n.toDateString();if(r==='week'){let st=startOfDay(n);st.setDate(st.getDate()-((st.getDay()+6)%7));return d>=st&&d<=n}return d.getFullYear()===n.getFullYear()&&d.getMonth()===n.getMonth()&&d<=n}function renderActivityStats(){let r=document.getElementById('statsRange')?.value||'day',ss=studySessions.filter(s=>inRange(s.at,r)),mins=Math.round(ss.reduce((a,s)=>a+s.seconds,0)/60),lectures=activityLog.filter(a=>a.done&&inRange(a.at,r)).length,label={day:'اليوم',week:'هذا الأسبوع',month:'هذا الشهر'}[r];document.getElementById('activityStats').innerHTML=`<span class="pill">📅 ${label}</span><span class="pill">⏱️ ${Math.floor(mins/60)} س ${mins%60} د</span><span class="pill">🎯 ${ss.length} جلسة</span><span class="pill">📚 ${lectures} محاضرة مؤشّرة</span>`}
-function renderSchedule(){let r=document.getElementById('scheduleTable');if(!r)return;let rows=[];data.forEach(c=>c.subs.forEach(s=>s.kinds.forEach(k=>rows.push(`<tr><td>${esc(c.id)}</td><td>${esc(c.name)}</td><td>${esc(s.name)}</td><td>${esc(k.name)}</td><td>${Math.max(0,+k.count||0)}</td><td>${(k.done||[]).filter(Boolean).length}</td><td>${Math.max(0,+k.count||0)-(k.done||[]).filter(Boolean).length}</td></tr>`))));r.innerHTML=rows.length?`<table><thead><tr><th>الرمز</th><th>المادة</th><th>التفرّع</th><th>النوع</th><th>العدد</th><th>مكتمل</th><th>متبقي</th></tr></thead><tbody>${rows.join('')}</tbody></table>`:'<div class="empty">أضيفي مواد حتى يظهر الجدول.</div>'}function renderSessions(){let r=document.getElementById('sessionsTable');if(!r)return;r.innerHTML=studySessions.length?`<table><thead><tr><th>التاريخ والوقت</th><th>الجلسة</th><th>المدة</th><th>النوع</th></tr></thead><tbody>${studySessions.slice(0,30).map(s=>`<tr><td>${new Date(s.at).toLocaleString('ar-IQ',{dateStyle:'short',timeStyle:'short'})}</td><td>${esc(s.label)}</td><td>${Math.floor(s.seconds/60)} د</td><td>${s.source==='focus'?'Focus':'Stopwatch'}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">بعد ما مسجّلتي جلسات. ابدئي أول جلسة دراسة 🌸</div>'}function clearSessions(){if(confirm('تمسحين سجل جلسات الدراسة كله؟')){studySessions=[];localStorage.setItem('nadaMedSessions','[]');renderActivityStats();renderSessions()}}
-const originalSave=save;save=function(){originalSave();renderSchedule();renderActivityStats();renderSessions()};const originalMark=mark;mark=function(ci,si,ki,j,v){let k=data[ci].subs[si].kinds[ki];if(!k.done)k.done=[];let before=!!k.done[j];k.done[j]=v;if(v&&!before){activityLog.push({at:new Date().toISOString(),done:true,course:data[ci].id,sub:data[ci].subs[si].name,kind:k.name,index:j});localStorage.setItem('nadaMedActivity',JSON.stringify(activityLog))}else if(!v&&before){let ix=-1;for(let i=activityLog.length-1;i>=0;i--){let a=activityLog[i];if(a.done&&a.course===data[ci].id&&a.sub===data[ci].subs[si].name&&a.kind===k.name&&a.index===j){ix=i;break}}if(ix>=0)activityLog.splice(ix,1);localStorage.setItem('nadaMedActivity',JSON.stringify(activityLog))}save();render()};
+            <!-- Side Tools -->
+            <div class="space-y-6">
+                
+                <!-- Timer -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 text-center">
+                    <div class="flex justify-center gap-4 mb-4 border-b border-slate-100 dark:border-slate-800 pb-3 text-sm font-bold">
+                        <button onclick="switchTimerMode('sw')" id="btnSW" class="text-purple-600 border-b-2 border-purple-600 pb-1">Stopwatch</button>
+                        <button onclick="switchTimerMode('pomo')" id="btnPomo" class="text-slate-400 pb-1">Pomodoro</button>
+                    </div>
+                    <div id="timerDisplay" class="text-4xl font-mono font-extrabold text-purple-600 dark:text-purple-400 my-4">00:00:00</div>
+                    <div class="flex justify-center gap-2">
+                        <button onclick="startTimer()" class="px-4 py-2 bg-emerald-500 text-white font-bold rounded-xl text-xs">تشغيل</button>
+                        <button onclick="pauseTimer()" class="px-4 py-2 bg-amber-500 text-white font-bold rounded-xl text-xs">إيقاف</button>
+                        <button onclick="resetTimer()" class="px-4 py-2 bg-slate-400 text-white font-bold rounded-xl text-xs">تصفير</button>
+                    </div>
+                </div>
 
-setupPages();applyAppearance();newQuote();renderTodos();focusPaint();swPaint();renderSchedule();renderActivityStats();renderSessions();save();render();
+                <!-- Absences -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-user-clock text-amber-500"></i> سجل الغيابات والإنذارات
+                    </h2>
+                    <div id="absenceList" class="space-y-4"></div>
+                </div>
 
-function showPage(name,button){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+name));document.querySelectorAll('.navItem').forEach(b=>b.classList.toggle('active',b.dataset.page===name));if(button)button.classList.add('active');if(name==='schedule')renderSchedule();if(name==='analytics')renderActivityStats();}
-function setupPages(){
- const pages={home:document.getElementById('page-home'),courses:document.getElementById('page-courses'),tasks:document.getElementById('page-tasks'),focus:document.getElementById('page-focus'),analytics:document.getElementById('page-analytics'),schedule:document.getElementById('page-schedule'),settings:document.getElementById('page-settings'),history:document.getElementById('page-history')};
- const stats=document.querySelector('main.wrap > .stats');if(stats)pages.home.appendChild(stats);
- const toolbar=document.querySelector('main.wrap > .toolbar');const courses=document.getElementById('courses');if(toolbar)pages.courses.appendChild(toolbar);if(courses)pages.courses.appendChild(courses);
- const panels=[...document.querySelectorAll('.extraGrid > .panel')];
- // A compact home panel featuring the daily motivation and useful shortcuts.
- const homeWelcome=document.createElement('div');homeWelcome.className='homeWelcome';
- const welcome=document.createElement('div');welcome.className='homeNote';welcome.innerHTML='<h2>أهلاً ندى، دكتورة المستقبل 🩺</h2><p>هنا تبنين إنجازج يوم بعد يوم. اختاري القسم اللي تحتاجينه، وحدّثي تقدمج أولاً بأول. مو مطلوب منج الكمال؛ الاستمرار هو المهم.</p><div class="homeActions"><button onclick="showPage(\'courses\')">📚 متابعة المحاضرات</button><button onclick="showPage(\'tasks\')">☑ مهام اليوم</button><button onclick="showPage(\'focus\')">⏱️ ابدئي جلسة</button></div>';
- const quote=panels[1];if(quote){quote.classList.add('homeNote');homeWelcome.append(welcome,quote);pages.home.appendChild(homeWelcome)}else pages.home.appendChild(welcome);
- if(panels[2])pages.tasks.appendChild(panels[2]);
- if(panels[3])pages.focus.appendChild(panels[3]);if(panels[4])pages.focus.appendChild(panels[4]);
- if(panels[5])pages.analytics.appendChild(panels[5]);if(panels[6])pages.schedule.appendChild(panels[6]);if(panels[0])pages.settings.appendChild(panels[0]);
- const backup=document.createElement('section');backup.className='panel';backup.innerHTML='<div class="panelHead"><h2>💾 النسخ الاحتياطي</h2></div><p class="hint">نزّلي نسخة من بياناتچ أو استرجعي نسخة سابقة إذا بدّلتي الجهاز.</p><div class="tools"><button class="btn primary" onclick="exportData()">⇩ نسخة احتياطية</button><button class="btn" onclick="document.getElementById('importFile').click()">⇧ استعادة البيانات</button></div>';pages.settings.appendChild(backup);if(panels[7])pages.history.appendChild(panels[7]);
- const extra=document.querySelector('.extraGrid');if(extra)extra.remove();
- // Keep the page navigation near the top, and remove the unused old stats/course nodes if any.
-}
-setupPages();
-render();
+                <!-- Finance -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-lg font-bold flex items-center gap-2">
+                            <i class="fa-solid fa-wallet text-emerald-500"></i> المصاريف الشهرية
+                        </h2>
+                        <button onclick="setBudget()" class="text-xs text-purple-600 underline font-bold">تحديد الميزانية</button>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between bg-slate-50 dark:bg-slate-800 p-3 rounded-xl">
+                            <span>الميزانية الشهرية:</span>
+                            <span id="budgetVal" class="font-bold">0 د.ع</span>
+                        </div>
+                        <div class="flex justify-between bg-slate-50 dark:bg-slate-800 p-3 rounded-xl">
+                            <span>إجمالي المصروف:</span>
+                            <span id="spentVal" class="font-bold text-red-500">0 د.ع</span>
+                        </div>
+                        <div class="flex justify-between bg-slate-50 dark:bg-slate-800 p-3 rounded-xl">
+                            <span>المتبقي (الوفر):</span>
+                            <span id="savedVal" class="font-bold text-emerald-500">0 د.ع</span>
+                        </div>
+                    </div>
+                    <button onclick="addExpense()" class="w-full py-2 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300 font-bold rounded-xl text-xs">
+                        + إضافة مصروف يومي
+                    </button>
+                </div>
 
-</script></body></html>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let store = JSON.parse(localStorage.getItem('nada_med_full_db')) || {
+            subjects: [
+                { id: 1, name: 'الباطنية (Internal Medicine)', lecs: [{ name: 'Intro to Cardiology', studied: false, reviewed: false }], abs: 0, w1: 2, w2: 4, w3: 6, fail: 8 }
+            ],
+            exams: [{ id: 1, title: 'Midterm OSCE', date: '2026-11-15', type: 'عملي' }],
+            budget: 250000,
+            expenses: []
+        };
+
+        function save() {
+            localStorage.setItem('nada_med_full_db', JSON.stringify(store));
+            renderAll();
+        }
+
+        function renderAll() {
+            renderSubjects();
+            renderExams();
+            renderAbsences();
+            renderFinance();
+        }
+
+        function renderSubjects() {
+            const container = document.getElementById('subjectsContainer');
+            container.innerHTML = '';
+            let totalLecs = 0, studiedCount = 0, reviewedCount = 0;
+
+            store.subjects.forEach((subj, sIdx) => {
+                let sStudied = 0, sReviewed = 0;
+                totalLecs += subj.lecs.length;
+
+                let lecsHTML = subj.lecs.map((lec, lIdx) => {
+                    if(lec.studied) { studiedCount++; sStudied++; }
+                    if(lec.reviewed) { reviewedCount++; sReviewed++; }
+
+                    return `
+                        <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl text-sm my-1">
+                            <span class="font-medium">${lec.name}</span>
+                            <div class="flex items-center gap-4 text-xs font-semibold">
+                                <label class="cursor-pointer flex items-center gap-1"><input type="checkbox" ${lec.studied ? 'checked' : ''} onchange="toggleLec(${sIdx}, ${lIdx}, 'studied')"> درستها</label>
+                                <label class="cursor-pointer flex items-center gap-1"><input type="checkbox" ${lec.reviewed ? 'checked' : ''} onchange="toggleLec(${sIdx}, ${lIdx}, 'reviewed')"> راجعتها</label>
+                                <button onclick="deleteLec(${sIdx}, ${lIdx})" class="text-red-400 hover:text-red-600 mr-2"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                let progPct = subj.lecs.length ? Math.round((sStudied / subj.lecs.length) * 100) : 0;
+
+                container.innerHTML += `
+                    <div class="border border-slate-200 dark:border-slate-800 p-4 rounded-2xl space-y-3">
+                        <div class="flex justify-between items-center flex-wrap gap-2">
+                            <div>
+                                <h3 class="font-bold text-lg text-purple-700 dark:text-purple-400">${subj.name}</h3>
+                                <p class="text-xs text-slate-400">نسبة إنجاز المادة: ${progPct}%</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="addLec(${sIdx})" class="px-3 py-1 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300 font-bold rounded-lg text-xs">+ ملزمة</button>
+                                <button onclick="deleteSubject(${sIdx})" class="px-2 py-1 bg-red-100 text-red-600 font-bold rounded-lg text-xs"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div>${lecsHTML || '<p class="text-xs text-slate-400 py-2">لا توجد ملازم مضافة.</p>'}</div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('overallStudyProgress').innerText = totalLecs ? Math.round((studiedCount / totalLecs) * 100) + '%' : '0%';
+            document.getElementById('overallReviewProgress').innerText = totalLecs ? Math.round((reviewedCount / totalLecs) * 100) + '%' : '0%';
+        }
+
+        function addSubject() {
+            let name = prompt('أدخلي اسم المادة الطبية الجديدة:');
+            if(name) { store.subjects.push({ id: Date.now(), name, lecs: [], abs: 0, w1: 2, w2: 4, w3: 6, fail: 8 }); save(); }
+        }
+
+        function deleteSubject(sIdx) { if(confirm('تأكيد الحذف؟')) { store.subjects.splice(sIdx, 1); save(); } }
+        function addLec(sIdx) { let name = prompt('اسم الملزمة:'); if(name) { store.subjects[sIdx].lecs.push({ name, studied: false, reviewed: false }); save(); } }
+        function deleteLec(sIdx, lIdx) { store.subjects[sIdx].lecs.splice(lIdx, 1); save(); }
+        function toggleLec(sIdx, lIdx, key) { store.subjects[sIdx].lecs[lIdx][key] = !store.subjects[sIdx].lecs[lIdx][key]; save(); }
+
+        function renderAbsences() {
+            const container = document.getElementById('absenceList');
+            container.innerHTML = '';
+
+            store.subjects.forEach((subj, sIdx) => {
+                let status = 'طبيعي', statusColor = 'text-emerald-500 bg-emerald-50';
+                if(subj.abs >= subj.fail) { status = 'رسوب بالغياب 🚫'; statusColor = 'text-red-700 bg-red-100 font-extrabold'; }
+                else if(subj.abs >= subj.w3) { status = 'إنذار نهائي ⚠️'; statusColor = 'text-red-500 bg-red-50'; }
+                else if(subj.abs >= subj.w2) { status = 'إنذار ثانوي ⚡'; statusColor = 'text-amber-600 bg-amber-50'; }
+                else if(subj.abs >= subj.w1) { status = 'إنذار أول 🔔'; statusColor = 'text-amber-500 bg-amber-50'; }
+
+                container.innerHTML += `
+                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl space-y-2 text-xs">
+                        <div class="flex justify-between items-center font-bold">
+                            <span>${subj.name}</span>
+                            <span class="px-2 py-0.5 rounded-md ${statusColor}">${status}</span>
+                        </div>
+                        <div class="flex justify-between items-center text-slate-500">
+                            <span>عدد الغيابات: <strong>${subj.abs}</strong></span>
+                            <div class="flex gap-1">
+                                <button onclick="changeAbs(${sIdx}, 1)" class="px-2 py-0.5 bg-slate-200 dark:bg-slate-700 rounded font-bold">+1 غياب</button>
+                                <button onclick="changeAbs(${sIdx}, -1)" class="px-2 py-0.5 bg-slate-200 dark:bg-slate-700 rounded font-bold">-1</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function changeAbs(sIdx, val) { store.subjects[sIdx].abs = Math.max(0, store.subjects[sIdx].abs + val); save(); }
+
+        function renderExams() {
+            const container = document.getElementById('examsList');
+            container.innerHTML = store.exams.map((ex, idx) => `
+                <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800 p-3 rounded-xl text-xs font-semibold">
+                    <div>
+                        <p class="font-bold text-slate-800 dark:text-slate-100">${ex.title} (${ex.type})</p>
+                        <p class="text-slate-400 mt-0.5">${ex.date}</p>
+                    </div>
+                    <button onclick="deleteExam(${idx})" class="text-red-400"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            `).join('') || '<p class="text-xs text-slate-400">لا توجد امتحانات مضافة.</p>';
+        }
+
+        function addExam() {
+            let title = prompt('اسم المادة:');
+            let date = prompt('التاريخ (YYYY-MM-DD):');
+            let type = prompt('النوع (نظري/عملي):');
+            if(title && date) { store.exams.push({ id: Date.now(), title, date, type: type || 'نظري' }); save(); }
+        }
+
+        function deleteExam(idx) { store.exams.splice(idx, 1); save(); }
+
+        function renderFinance() {
+            let totalSpent = store.expenses.reduce((acc, curr) => acc + curr.amount, 0);
+            let saved = store.budget - totalSpent;
+            document.getElementById('budgetVal').innerText = store.budget.toLocaleString() + ' د.ع';
+            document.getElementById('spentVal').innerText = totalSpent.toLocaleString() + ' د.ع';
+            document.getElementById('savedVal').innerText = saved.toLocaleString() + ' د.ع';
+            document.getElementById('statSpent').innerText = totalSpent.toLocaleString() + ' د.ع';
+            document.getElementById('statSaved').innerText = saved.toLocaleString() + ' د.ع';
+        }
+
+        function setBudget() { let b = prompt('الميزانية (د.ع):', store.budget); if(b) { store.budget = parseInt(b) || 0; save(); } }
+        function addExpense() { let amt = prompt('المبلغ (د.ع):'); if(amt) { store.expenses.push({ id: Date.now(), amount: parseInt(amt) || 0 }); save(); } }
+        function toggleDarkMode() { document.documentElement.classList.toggle('dark'); }
+
+        // Timer
+        let timerMode = 'sw', timerInterval, seconds = 0;
+        function switchTimerMode(m) {
+            timerMode = m; resetTimer();
+            document.getElementById('btnSW').className = m === 'sw' ? 'text-purple-600 border-b-2 border-purple-600 pb-1' : 'text-slate-400 pb-1';
+            document.getElementById('btnPomo').className = m === 'pomo' ? 'text-purple-600 border-b-2 border-purple-600 pb-1' : 'text-slate-400 pb-1';
+            if(m === 'pomo') seconds = 1500;
+            updateTimerDisplay();
+        }
+
+        function updateTimerDisplay() {
+            let h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+            let m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+            let s = String(seconds % 60).padStart(2, '0');
+            document.getElementById('timerDisplay').innerText = timerMode === 'sw' ? `${h}:${m}:${s}` : `${m}:${s}`;
+        }
+
+        function startTimer() {
+            if(!timerInterval) {
+                timerInterval = setInterval(() => {
+                    if(timerMode === 'sw') seconds++;
+                    else { if(seconds > 0) seconds--; else { clearInterval(timerInterval); alert('انتهى البومودورو!'); } }
+                    updateTimerDisplay();
+                }, 1000);
+            }
+        }
+        function pauseTimer() { clearInterval(timerInterval); timerInterval = null; }
+        function resetTimer() { pauseTimer(); seconds = timerMode === 'sw' ? 0 : 1500; updateTimerDisplay(); }
+
+        renderAll();
+    </script>
+</body>
+</html>
